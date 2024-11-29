@@ -1,0 +1,797 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 8000px;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(163, 55, 55, 0.7);
+    position: fixed;
+    top: 0;
+    z-index: 20;
+}
+
+.homeicon {
+    font-size: 25px;
+    margin: 14px 25px 10px 30px;
+    color: aliceblue;
+}
+
+.header input {
+    width: 250px;
+    height: 32px;
+    border-radius: 20px;
+    padding: 2px 0px 0px 37px;
+    border: 0;
+    position: relative;
+    font-size: 18px;
+    position: absolute;
+    margin-top: 9px;
+}
+
+.search {
+    position: absolute;
+    margin: 17px 0 0 12px;
+    z-index: 2;
+    font-size: 19px;
+    color: rgb(73, 73, 73);
+    cursor: text;
+}
+
+.list {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+}
+
+.list li {
+    display: inline-block;
+    margin: 10px 17px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.list li a {
+    text-decoration: none;
+    padding-bottom: 5px;
+    color: aliceblue;
+    position: relative;
+}
+
+.list li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    border-radius: 10px;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+    background-color: rgb(247, 222, 86);
+}
+
+.list li a:hover::after {
+    width: 100%;
+}
+
+.hero-image {
+    background-image: url(../images/head.jpeg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    position: absolute;
+}
+
+h1 {
+    color: aliceblue;
+    font-size: 52px;
+    transition: 0.4s;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    color: rgb(212, 207, 207);
+    font-size: 17px;
+    word-spacing: 1px;
+}
+
+.hero-text button {
+    width: 120px;
+    height: 50px;
+    transition: 0.3s;
+    border-radius: 12px;
+    border: 0;
+    margin: 20px 0px 0px 10px;
+    font-size: 19px;
+}
+
+.hero-btn2 {
+    background-color: rgb(247, 222, 86);
+    color: rgb(0, 0, 0);
+}
+
+.hero-text button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 13, 13, 0.4);
+}
+
+.sec2-h2 {
+    font-size: 45px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.sec2-line , .sec3-line , .sec4-line , .sec7-line , .sec9-line {
+    width: 130px;
+    height: 4px;
+    background-color: #ab1c1c;
+    margin: auto;
+    margin-top: 16px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.sec2-line {
+    width: 170px;
+}
+.sec2-title:hover .sec2-line {
+    width: 300px;
+}
+
+.sec2-parent {
+    overflow: auto;
+    margin: 200px auto;
+    width: 80%;
+}
+
+.sec2-parent div {
+    width: 400px;
+    height: 280px;
+    border: 2px solid #ab1c1c;
+    ;
+    float: left;
+    text-align: center;
+    margin: 40px 52.5px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.sec2-parent i {
+    font-size: 37px;
+    margin-top: 20px;
+    color: rgb(196, 0, 0);
+}
+
+.sec2-parent h2 {
+    margin-top: 15px;
+    font-size: 30px;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 500;
+}
+
+.sec2-parent p {
+    padding-top: 25px;
+    color: rgb(99, 99, 99);
+    margin-bottom: 40px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.sec2-parent a {
+    text-decoration: none;
+    color: rgb(42, 69, 224);
+}
+
+.sec2-parent div:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+    left: 0;
+    background-color: #ff8c62;
+    opacity: 0.15;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.sec2-parent div:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.45;
+}
+
+.sec2-parent div:hover i {
+    color: #d60c0c;
+    transition: 0.5s;
+}
+
+.sec2-parent div:hover p {
+    color: rgb(92, 89, 89);
+    transition: 0.5s;
+}
+
+.sec2-parent div:hover a {
+    color: blue;
+    transition: 0.6s;
+}
+
+.sec2-parent a:hover {
+    text-decoration: underline;
+}
+
+.sec3-title:hover .sec3-line {
+    width: 220px;
+}
+
+.sec3-h2 {
+    font-size: 45px;
+    text-align: center;
+    margin-top: 320px;
+}
+
+.sec3-parent , .sec4-parent {
+    width: 65%;
+    margin: auto;
+    margin-top: 70px;
+    overflow: auto;
+}
+.sec3-img1 , .sec3-img2 , .sec3-img3 , .sec3-img4 , .sec3-img5 , .sec3-img6 {
+    width: 370px;
+    height: 260px;
+    background-size: cover;
+    float: left;
+    border-radius: 10px;
+    margin: 40px 20px;
+    position: relative;
+}
+.sec3-img1 h2 {
+    font-size: 30px;
+}
+.sec3-overlay1 {
+    text-align: center;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+} 
+.sec3-overlay1 h2 {
+    margin-top: 30px;
+    color: rgb(192, 192, 192);
+    font-size: 34px;
+    transition: 0.5s;
+    opacity: 0;
+}
+.sec3-overlay1 p {
+    color: rgb(248, 248, 248);
+    margin-top: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight:600;
+    opacity: 0;
+    transition: 0.5s;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.sec3-overlay1 button {
+    font-size: 30;
+    border: 0;
+    color: #ab1c1c;
+    margin: 50px 3px;
+    width: 50px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0;
+    position: relative;
+}
+.sec3-overlay1 button i {
+    transition: 0.5s;
+}
+.sec3-parent div:hover .sec3-overlay1 {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.sec3-parent div:hover p {
+    opacity: 1;
+}
+.sec3-parent div:hover h2 {
+    opacity: 1;
+}
+.sec3-parent div:hover button {
+    opacity: 1;
+}
+.sec3-overlay1 button:hover i {
+    opacity: 0.5;
+}
+.sec3-img1 {
+    background-image: url(../images/img1.jpeg);
+}
+.sec3-img2 {
+    background-image: url(../images/img2.jpg);
+    background-image: url(../images/img3.jpeg);
+    background-position: center;
+}
+.sec3-img3 {
+    background-image: url(../images/img3.jpeg);
+    background-position: center;
+    background-image: url(../images/img2.jpg);
+}
+
+.sec3-img4 {
+    background-image: url(../images/img4.jpeg);
+    background-position: center right;
+}
+.sec3-img5 {
+    background-image: url(../images/img5.jpeg);
+    background-position: center;
+} 
+.sec3-img6 {
+    background-image: url(../images/img6.jpeg);
+    background-position: center;
+}
+.sec4-title h2 {
+    font-size: 45px;
+    text-align: center ;
+    margin-top: 120px;
+}
+.sec4-line {
+    width: 120px;
+}
+.sec4-title:hover .sec4-line {
+    width: 200px;
+}
+.sec4-parent {
+    width: 80.7%;
+
+}
+.sec4-parent div {
+    width: 410px;
+    height: 265px;
+    border: 2px solid rgba(171, 28, 28,0.7);
+    float: left;
+    border-radius: 10px;
+    margin: 35px 50px;
+    position: relative;
+}
+.sec4-parent h2 {
+    margin: 25px 0 0 70px;
+    font-size: 34px;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    transition: 0.5s;
+}
+.sec4-parent i {
+    margin: -95px 2px 0px 12px;
+    font-size: 45px;
+    color: #ab1c1c;
+    transition: 0.6s;
+}
+.sec4-parent p {
+    color: rgb(99, 99, 99);
+    margin: 10px 0 0 75px;
+    word-spacing: 1.5px;
+    padding-right: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.sec4-parent div::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 50%;
+    transition: 0.5s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff8c62;
+    opacity: 0;
+    border-radius: 10px;
+    z-index: -1;
+}
+.sec4-parent div:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.sec4-parent div:hover p {
+    color: rgb(78, 78, 78);
+    transition: 0.5s;
+}
+.sec4-parent div:hover h2 {
+    color: #c50000;
+}
+.sec4-parent div:hover i {
+    color: #d30000;
+}
+.sec5-title {
+    font-size: 45px;
+    margin: 300px 70% 0 200px;
+    position: relative;
+    height: 75px;
+}
+.sec5-title::after {
+    content: "";
+    position: absolute;
+    width: 26.3%;
+    height: 4px;
+    background-color: #ab1c1c;
+    border-radius: 10px;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+.sec5-title:hover::after {
+    width: 89%;
+}
+.sec5-img-list {
+    float: right;
+    margin: -560px 250px 0 0;
+    height: 750px;
+    overflow: auto;
+}
+.sec5-img {
+    border-radius: 15px;
+}
+.sec5-img-list ul li {
+    font-size: 45px;
+    color: #858585;
+    float: right;
+    margin: -12px 0 0 35px;
+}
+
+.sec5-img-list ul li:hover {
+    color: rgba(171, 28, 28, 0.7);
+}
+.sec5-text p {
+    margin: 40px 0 0 200px;
+    font-size: 19px;
+    color: #575757;
+    font-weight: 500;
+}
+.sec5-text i {
+    color: #ac1515;
+    margin-right: 10px;
+}
+.sec5 h3 {
+    margin: 70px 0 40px 205px;
+    color: #424242; font-size: 22.5px;
+}
+.sec6 , .sec8 {
+    background: url(../images/img8.jpeg)  no-repeat  fixed  center ; 
+    margin-top: 400px; 
+    background-size:cover; 
+    width: 100%; 
+    height: 400px;
+    position: relative;
+}
+.sec6-overlay , .sec8-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%; 
+    height: 400px;
+}
+.sec6-parent {
+    margin-top: 140px ;
+    width: 100%;
+    position: absolute;
+    overflow: auto;
+    padding-left: 150px;
+}
+.sec6-text1 {
+    text-align: center;
+    color: white;
+    width: 200px;
+    float: left;
+    margin:10px 100px ;
+}
+.sec6-text1  i {
+    font-size: 45px;
+    color: rgb(230, 195, 0);
+    margin-bottom: 17px;
+}
+.sec6-text1  p {
+    margin-top: 3px ;
+    font-weight: 500;
+}
+.sec7-h2 {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 43px;
+}
+.sec7-line {
+    width: 100px;
+}
+.sec7-title:hover .sec7-line{
+  width: 180px;
+}
+.sec7-parent {
+    width: 82%;
+    height: 600px;
+    margin: auto;
+    margin-top: 50px;
+    overflow: auto;
+}
+.sec7-div1 {
+    
+    float: left;
+    width: 420px;
+    height: 460px;
+    margin: 70px 20px 0 63px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px outset #ab1c1c;
+    position: relative;
+}
+.div1-title {
+    font-size: 25px;
+    margin-top: 25px;
+    transition: 0.2s;
+    
+}
+.sec7-price {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: auto; margin-top: 20px; margin-bottom: 50px;
+    margin: 20px auto 30px auto;
+    border: 2px outset rgba(202, 62, 62, 0.8);
+    transition: 0.4s;
+}
+.price-h2 {
+    font-size: 55px;
+}
+#price-p {
+    font-size: 22px;
+    margin-top: -4px;
+    font-weight: 500;
+}
+.sec7-div1 p {
+    font-size: 19px;
+    font-weight: 500;
+    margin: 17px 0;
+}
+.sec7-btn {
+    margin: 20px auto 20px auto;
+    width: 230px;
+    height: 40px;
+    border: 2px outset rgba(171, 28, 28,0.8);
+    border-radius: 10px;
+    font-size: 19px;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 2px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.sec7-div1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgb(253, 153, 116);
+    opacity: 0.7;
+    z-index: -1;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+.sec7-div1:hover:after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.sec7-btn:hover {
+    background-color: #cc2f2f ;
+    border: 2px outset  rgb(235, 250, 31);
+    color: white;
+}
+.price2-h2 {
+    font-size: 52px;
+    margin-top: 5px;
+}
+.sec7-div1:hover .div1-title {
+    color: #bd1e1e;
+}
+.sec7-div1:hover .sec7-price {
+    border: 2px outset rgb(202, 62, 62) ;
+}
+.sec8 {
+    margin-top: 150px;
+    background-image: url(../images/_00fe3ebb6-a5d9-4c7d-8f62-d2fcffab0d4c.jpeg);
+    background-position: bottom;
+}
+.sec8-parent {
+    width: 100%;
+    margin-top: 85px;
+    position: absolute;
+    overflow: auto;
+}
+.sec8-text{
+
+    margin: 40px 0 50px 360px;
+    float: left;
+}
+.sec8-text2 {
+    float: right;
+    margin: 40px 200px 0 0px;
+}
+.sec8-h2  {
+    font-size: 28px;
+   color: rgb(255, 255, 255);
+   margin:-80px 0 50 120px ;
+   
+}
+.sec8-h3{
+    margin: -40px 0 30px 120px ;
+    color: rgb(255, 194, 61);
+}
+.sec8-p {
+    color: #e0e0e0;
+    margin-top: -10px;
+    letter-spacing: 0.4px;
+    line-height: 24px;
+}
+.sec8-parent img {
+     border-radius: 50%;
+    
+}
+.sec9-title h2 {
+    margin-top: 120px;
+    text-align: center;
+    font-size: 45px;
+}
+.sec9-line {
+    width: 85px;
+}
+.sec9-title:hover .sec9-line{
+    width: 150px;
+}
+.sec9-parent {
+
+    overflow: auto;
+    width: 80%;
+    height: 600px;
+    margin: 50px auto ;
+}
+.sec9-child1 {
+    width: 400px ;
+    height: 400px;
+    float: left;
+    background-color: #d4d4d4;
+    margin: 90px 52px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 0;
+}
+.sec9-child1 img {
+    
+    border-radius: 7px;
+    width: 100%;
+}
+.sec9-child1 h3 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 25px;
+    transition: 0.6s;
+}
+.sec9-child1 p {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    color:rgb(90, 88, 88);
+    text-transform: uppercase;
+    transition: 0.7s;
+}
+.img-overlay {
+    background-color: rgba(0, 0, 0,0.4);
+    position: absolute;
+    width: 100%;
+    
+}
+.sec9-img-overlay {
+    position: relative;
+    width: 85%;
+    margin: 30px auto;
+    
+}
+.img-overlay {
+    background-color: rgba(177, 143, 49,0);
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    border-radius: 7px;
+}
+.img-icons {
+   background-color: #852a2a; 
+   margin-left:auto;
+   padding: 5px 0;
+   width: 50px;
+   border-radius: 7px;
+   opacity: 0;
+    transition: 0.4s;
+    z-index: 0;
+}
+.img-icons a {
+    color: white;
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    padding-top: 5px;
+    font-size: 25px;
+    
+}
+.sec9-parent div:hover .img-icons {
+    opacity: 1;
+}
+.sec9-parent div:hover .img-overlay {
+    visibility: visible;
+    
+    background-color: rgba(39, 20, 14, 0.5);
+}
+.sec9-child1:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    transition: 0.5s;
+    background-color:rgb(253, 153, 116) ;
+    opacity: 0.5;
+    border-radius: 15px;
+    z-index: -1;
+}
+.sec9-child1:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+.sec9-child1:hover.sec9-child1 h3 {
+    color: #ab1c1c;
+}
+.sec9-child1:hover  p {
+    color: rgb(65, 65, 65);
+}
+
+
+
+
+
+
+
+
+
+
+
+
