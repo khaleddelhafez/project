@@ -299,12 +299,10 @@ h1 {
     background-image: url(../images/img1.jpeg);
 }
 .sec3-img2 {
-    background-image: url(../images/img2.jpg);
     background-image: url(../images/img3.jpeg);
     background-position: center;
 }
 .sec3-img3 {
-    background-image: url(../images/img3.jpeg);
     background-position: center;
     background-image: url(../images/img2.jpg);
 }
@@ -644,10 +642,10 @@ h1 {
 }
 .sec9-child1 {
     width: 420px ;
-    height: 400px;
+    height: 450px;
     float: left;
     background-color: #d4d4d4;
-    margin: 90px 42px;
+    margin: 70px 42px;
     border-radius: 15px;
     position: relative;
     z-index: 0;
@@ -783,6 +781,7 @@ h1 {
 .sec10-child1 i {
     color: #ab1c1c;
     margin-left: 20px;
+    transition: 0.5s;
 }
 .sec10-child1 span {
     margin-left: 7px ;
